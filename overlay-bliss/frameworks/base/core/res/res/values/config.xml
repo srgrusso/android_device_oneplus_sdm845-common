@@ -49,4 +49,7 @@
     <!-- Whether to use in-built Screen Record service -->
     <bool name="config_showScreenRecord">true</bool>
 
+    <!-- Hide notch  -->
+    <bool name="config_physicalDisplayCutout">true</bool>
+
 </resources>
