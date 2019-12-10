@@ -104,6 +104,10 @@ PRODUCT_PACKAGES += \
 # APEX
 PRODUCT_COMPRESSED_APEX := false
 
+# DerpFest Device Settings
+PRODUCT_PACKAGES += \
+    DeviceSettings
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
@@ -421,7 +425,7 @@ PRODUCT_PACKAGES += \
 
 # tri-state-key
 PRODUCT_PACKAGES += \
-    KeyHandler
+    tri-state-key_daemon.vendor
 
 # Trust HAL
 #PRODUCT_PACKAGES += \
