@@ -104,7 +104,7 @@ PRODUCT_PACKAGES += \
 
 # Doze
 PRODUCT_PACKAGES += \
-    OnePlusDoze
+    CustomDoze
 
 # HotwordEnrollement app permissions
 PRODUCT_COPY_FILES += \
