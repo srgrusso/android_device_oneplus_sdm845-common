@@ -146,7 +146,8 @@ BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flag 2
 TARGET_GAPPS_OVERRIDE += \
     GoogleDialer \
     Photos \
-    NfcNci
+    NfcNci \
+    Snap
 
 # Inherit from the proprietary version
 -include vendor/oneplus/sdm845-common/BoardConfigVendor.mk
