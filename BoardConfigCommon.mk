@@ -1,4 +1,3 @@
-
 # Copyright (C) 2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -147,7 +146,9 @@ TARGET_GAPPS_OVERRIDE += \
     GoogleDialer \
     Photos \
     NfcNci \
-    Snap
+    Snap \
+    UnifiedEmail \
+    Email
 
 # Inherit from the proprietary version
 -include vendor/oneplus/sdm845-common/BoardConfigVendor.mk
