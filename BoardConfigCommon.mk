@@ -148,7 +148,9 @@ TARGET_GAPPS_OVERRIDE += \
     NfcNci \
     Snap \
     UnifiedEmail \
-    Email
+    Email \
+    PixelLiveWallpaperPrebuilt \
+    NexusWallpapersStubPrebuilt2019
 
 # Inherit from the proprietary version
 -include vendor/oneplus/sdm845-common/BoardConfigVendor.mk
