@@ -150,7 +150,12 @@ TARGET_GAPPS_OVERRIDE += \
     UnifiedEmail \
     Email \
     PixelLiveWallpaperPrebuilt \
-    NexusWallpapersStubPrebuilt2019
+    NexusWallpapersStubPrebuilt2019 \
+    GoogleCamera \
+    Chrome \
+    AudioFX \
+    Etar \
+    Jelly
 
 # Inherit from the proprietary version
 -include vendor/oneplus/sdm845-common/BoardConfigVendor.mk
