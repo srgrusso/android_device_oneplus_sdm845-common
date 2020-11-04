@@ -417,6 +417,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     power.qcom:64
     
+# Pixel Offline charger
+PRODUCT_PACKAGES += \
+    charger_res_images \
+    product_charger_res_images
+
 # Protobuf
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-vendorcompat \
