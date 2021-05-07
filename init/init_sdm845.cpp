@@ -89,4 +89,7 @@ void vendor_load_properties()
 
        // Property Overrides
        property_override("ro.control_privapp_permissions", "log");
+
+       // fingerprint
+       property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "google/sunfish/sunfish:11/RQ2A.210505.002/7246365:user/release-keys");
 }
