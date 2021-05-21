@@ -52,6 +52,7 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 NEED_KERNEL_MODULE_SYSTEM := true
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/oneplus/sdm845
+TARGET_KERNEL_CONFIG := sonic_defconfig
 TARGET_KERNEL_CLANG_COMPILE := true
 
 # Platform
@@ -129,3 +130,6 @@ BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flag 2
 
 # Inherit from the proprietary version
 -include vendor/oneplus/sdm845-common/BoardConfigVendor.mk
+
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
