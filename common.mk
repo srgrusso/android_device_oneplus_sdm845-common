@@ -94,10 +94,21 @@ PRODUCT_PACKAGES += \
     libcvface_api \
     Snap
 
+# Camera HIDL
+PRODUCT_PACKAGES += \
+    vendor.oneplus.camera.CameraHIDL@1.0 \
+    vendor.oneplus.camera.CameraHIDL@1.0-adapter-helper \
+    vendor.oneplus.camera.CameraHIDL-V1.0-java
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/whitelist/hiddenapi-package-whitelist-oneplus.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/hiddenapi-package-whitelist-oneplus.xml \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-oneplus.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-oneplus.xml
+
 # Common init scripts
 PRODUCT_PACKAGES += \
     init.adaptive_charging.rc \
     init.device.extras.rc \
+    init.opcamera.rc \
     init.qcom.rc \
     init.recovery.qcom.rc \
     ueventd.qcom.rc
@@ -176,7 +187,8 @@ PRODUCT_PACKAGES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    device/oneplus/common
 
 # Telephony
 PRODUCT_PACKAGES += \
