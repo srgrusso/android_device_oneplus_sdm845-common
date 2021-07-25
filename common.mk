@@ -106,7 +106,6 @@ PRODUCT_COPY_FILES += \
 
 # Common init scripts
 PRODUCT_PACKAGES += \
-    init.adaptive_charging.rc \
     init.device.extras.rc \
     init.opcamera.rc \
     init.qcom.rc \
