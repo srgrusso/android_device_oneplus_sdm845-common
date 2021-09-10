@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2018 The LineageOS Project
+# Copyright (C) 2021 The Evolution X Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -28,7 +29,7 @@ $(call inherit-product, vendor/oneplus/sdm845-common/sdm845-common-vendor.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-evolution
 
 PRODUCT_PACKAGES += \
     OdmOverlay-OPSystemUI \
@@ -80,8 +81,8 @@ PRODUCT_PACKAGES += \
     OnePlusDiracGef
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/audio/audio_policy_configuration.xml \
-    $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/audio_policy_configuration.xml
+    $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/audio/audio_policy_configuration.xml \
+    $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/audio_policy_configuration.xml
 
 # Boot control
 PRODUCT_PACKAGES += \
@@ -126,24 +127,20 @@ PRODUCT_PACKAGES += \
 
 # HotwordEnrollement app permissions
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
 
 # Input
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/idc/gf_input.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/gf_input.idc \
-    $(LOCAL_PATH)/keylayout/gf_input.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/gf_input.kl
+    $(LOCAL_PATH)/configs/input/idc/gf_input.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/gf_input.idc \
+    $(LOCAL_PATH)/configs/input/keylayout/gf_input.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/gf_input.kl
 
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.oneplus_sdm845
 
-# LiveDisplay
-PRODUCT_PACKAGES += \
-    lineage.livedisplay@2.0-service.oneplus_sdm845
-
 # Media
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/media_profiles_vendor.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/media_profiles_vendor.xml
+    $(LOCAL_PATH)/configs/media/media_profiles_vendor.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/media_profiles_vendor.xml
 
 PRODUCT_PACKAGES += \
     libavservices_minijail
@@ -174,6 +171,10 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     power.qcom:64
 
+# Remove unwanted packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
@@ -199,10 +200,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     KeyHandler \
     tri-state-key_daemon
-
-# Trust HAL
-PRODUCT_PACKAGES += \
-    lineage.trust@1.0-service
 
 # Update engine
 PRODUCT_PACKAGES += \
@@ -230,4 +227,4 @@ PRODUCT_BOOT_JARS += \
     WfdCommon
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/privapp-permissions-wfd.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-wfd.xml
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-wfd.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-wfd.xml

@@ -1,0 +1,17 @@
+[
+  {
+    "repository"  : "kernel_oneplus_sdm845",
+    "target_path" : "kernel/oneplus/sdm845"
+  },
+  {
+    "repository"  : "vendor_oneplus-new",
+    "target_path" : "vendor/oneplus"
+  },
+  {
+    "remote"      : "github",
+    "repository"  : "kdrag0n/proton-clang",
+    "branch"      : "master",
+    "clone-depth" : "1",
+    "target_path" : "prebuilts/clang/host/linux-x86/clang-proton"
+  }
+]
