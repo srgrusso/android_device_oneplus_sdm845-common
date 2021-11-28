@@ -411,10 +411,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     RemovePackages
 
-# Prebuilts
-PRODUCT_PACKAGES += \
-   OnePlusGallery
-
 # Protobuf
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-vendorcompat \
