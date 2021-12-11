@@ -83,6 +83,8 @@ void load_dalvikvm_properties()
 
 void vendor_load_properties()
 {
-	// Load dalvik config
+    property_override_dual("ro.control_privapp_permissions", "ro.control_privapp_permissions", "log");
+
+    // Load dalvik config
 	load_dalvikvm_properties();
 }
