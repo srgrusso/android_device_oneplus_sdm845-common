@@ -190,7 +190,12 @@ PRODUCT_PACKAGES += \
     init.msm.usb.configfs.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
-    ueventd.qcom.rc
+    ueventd.qcom.rc \
+    init.device_extras.rc
+
+# DeviceExtras Package
+PRODUCT_PACKAGES += \
+    DeviceExtras
 
 # Display
 PRODUCT_PACKAGES += \
@@ -516,7 +521,7 @@ PRODUCT_PACKAGES += \
 
 # tri-state-key
 PRODUCT_PACKAGES += \
-    KeyHandler
+    tri-state-key_daemon
 
 # Update engine
 PRODUCT_PACKAGES += \

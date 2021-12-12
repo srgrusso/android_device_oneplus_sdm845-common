@@ -1,0 +1,8 @@
+# Allow init to chown/chmod on pseudo files in /sys
+allow init {
+    sysfs_dm
+    sysfs_fastcharge
+    sysfs_leds
+    sysfs_sound_control
+    vendor_sysfs_msm_perf
+}:file { r_file_perms setattr };
