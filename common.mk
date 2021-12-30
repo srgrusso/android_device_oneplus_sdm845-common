@@ -404,9 +404,13 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    power.qcom:64 \
+    android.hardware.power-service.op6-libperfmgr \
+    android.hardware.power.stats@1.0-service.op6 \
     android.hardware.power@1.2 \
     android.hardware.power@1.2.vendor
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilts/lib64/pixel-power-ext-V1-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib64/pixel-power-ext-V1-ndk_platform.so
 
 # Pixel Offline charger
 PRODUCT_PACKAGES += \
@@ -500,7 +504,9 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/oneplus
+    hardware/oneplus \
+    hardware/google/pixel \
+    hardware/google/interface
 
 # Telephony
 PRODUCT_PACKAGES += \
