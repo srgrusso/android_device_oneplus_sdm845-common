@@ -190,12 +190,9 @@ PRODUCT_PACKAGES += \
     init.msm.usb.configfs.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
+    init.temp.rc \
     ueventd.qcom.rc \
     init.device_extras.rc
-
-# DeviceExtras Package
-PRODUCT_PACKAGES += \
-    DeviceExtras
 
 # Display
 PRODUCT_PACKAGES += \
