@@ -6,3 +6,4 @@ allow init {
     sysfs_sound_control
     vendor_sysfs_msm_perf
 }:file { r_file_perms setattr };
+allow init flipendo:binder transfer;
