@@ -1,1 +1,4 @@
 allow hal_perf_default proc_meminfo:file r_file_perms;
+
+#set_prop(hal_param_default, bootloader_prop)
+set_prop(hal_param_default, vendor_camera_prop)

@@ -1,0 +1,1 @@
+get_prop(hal_neuralnetworks_default, vendor_camera_prop)
