@@ -39,7 +39,7 @@
     <bool name="config_deviceSupportsPowerEfficientWorkqueue">true</bool>
 
     <!-- Whether device supports Touch Screen Gestures -->
-    <bool name="config_deviceSupportsTouchScreenGestures">true</bool>
+    <bool name="config_deviceSupportsTouchScreenGestures">false</bool>
 
     <!-- Whether device supports OTG -->
     <bool name="config_deviceSupportsOTG">true</bool>
