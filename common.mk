@@ -350,7 +350,7 @@ PRODUCT_PACKAGES += \
     vendor.oneplus.hardware.camera-V1.0-java \
     vendor.oneplus.hardware.CameraMDMHIDL-V1.0-java
 
-$(call inherit-product-if-exists, vendor/oneplus/apps/sdm845/config.mk)
+$(call inherit-product-if-exists, vendor/oneplus/camera/config.mk)
 
 # Power
 PRODUCT_PACKAGES += \
