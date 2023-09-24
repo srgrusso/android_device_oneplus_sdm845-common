@@ -32,6 +32,9 @@
     <!-- Whether device supports USB2.0 Force Fastcharge -->
     <bool name="config_deviceSupportsUSB2FC">false</bool>
 
+    <!-- Whether device supports Power Efficient Workqueue -->
+    <bool name="config_deviceSupportsPowerEfficientWorkqueue">true</bool>
+
     <!-- Whether device supports Touch Screen Gestures -->
     <bool name="config_deviceSupportsTouchScreenGestures">true</bool>
 
