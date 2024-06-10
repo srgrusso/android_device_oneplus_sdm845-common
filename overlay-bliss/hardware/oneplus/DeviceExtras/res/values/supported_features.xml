@@ -58,7 +58,7 @@
     <bool name="config_deviceSupportsPanelModes">false</bool>
 
     <!-- Whether device supports Touch Screen Gestures -->
-    <bool name="config_deviceSupportsTouchScreenGestures">false</bool>
+    <bool name="config_deviceSupportsTouchScreenGestures">true</bool>
 
     <!-- Whether device supports GameMode -->
     <bool name="config_deviceSupportsGameMode">false</bool>
