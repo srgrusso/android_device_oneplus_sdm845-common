@@ -1,3 +1,7 @@
+# Charging
+genfscon sysfs /class/oplus_chg/usb                                    u:object_r:vendor_sysfs_usb_supply:s0
+genfscon sysfs /class/power_supply/usb                                 u:object_r:vendor_sysfs_usb_supply:s0
+
 # procfs
 genfscon proc /dash_4300_4p45_exit    u:object_r:sysfs_dash_charger:s0
 genfscon proc /dash_4320_4p45_exit    u:object_r:sysfs_dash_charger:s0
